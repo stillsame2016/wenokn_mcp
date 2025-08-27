@@ -1,0 +1,16 @@
+openai
+llama-index-embeddings-huggingface
+google-generativeai
+groq
+geopandas
+langchain-groq
+datacommons-pandas
+sparql-dataframe
+langchain_openai
+langchain_openai
+langchain-core
+langchain
+chromadb
+fastapi
+uvicorn[standard]
+python-multipart
