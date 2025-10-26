@@ -70,7 +70,14 @@ def search_datasets(
                 if resource.get('format') == 'WCS':
                     wcs_resource = resource
                     break
-            
+
+            # Find WMS resource
+            wms_resource = None
+            for resource in pkg.get('resources', []):
+                if resource.get('format') == 'WMS':
+                    wms_resource = resource
+                    break
+                    
             if not wcs_resource:
                 continue
             
@@ -80,6 +87,10 @@ def search_datasets(
             dataset_info = {
                 'wcs_coverage_id': wcs_resource.get('wcs_coverage_id'),
                 'wcs_base_url': wcs_resource.get('url'),
+                'wcs_projection': wcs_resource.get('wcs_srs'),
+                'wms_layer_name': wms_resource.get('wms_layer'),
+                'wms_base_url': wms_resource.get('url'),
+                'wms_projection': wcs_resource.get('wms_srs'),
                 'title': pkg.get('title', ''),
                 'description': pkg.get('notes', '')[:300],  # Truncate
                 'data_units': extras.get('data_units', 'unknown'),
