@@ -18,7 +18,7 @@ def search_datasets(
     
     This tool uses semantic search to find the most relevant California Landscape
     Metrics datasets for a given query. It returns dataset metadata including
-    WCS coverage IDs, descriptions, and data units.
+    WCS coverage IDs, WMS layer names, descriptions, and data units.
     
     Args:
         query: Natural language query describing what data you need
