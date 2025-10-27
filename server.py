@@ -94,7 +94,7 @@ def search_datasets(
                 'title': pkg.get('title', ''),
                 'description': pkg.get('notes', '')[:600],  # Truncate
                 'data_units': extras.get('data_units', 'unknown'),
-                'categorical_values': extras.get('categorical_values', ''),
+                # 'categorical_values': extras.get('categorical_values', ''),
                 'pillar': extras.get('pillar', 'unknown'),
                 'element': extras.get('element', 'unknown'),
                 'tags': [tag['name'] for tag in pkg.get('tags', [])]
