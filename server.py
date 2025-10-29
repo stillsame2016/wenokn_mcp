@@ -92,9 +92,9 @@ def search_datasets(
                 'wms_base_url': wms_resource.get('url'),
                 'wms_projection': wcs_resource.get('wms_srs'),
                 'title': pkg.get('title', ''),
+                'name': pkg.get('name', ''),
                 'description': pkg.get('notes', '')[:600],  # Truncate
                 'data_units': extras.get('data_units', 'unknown'),
-                # 'categorical_values': extras.get('categorical_values', ''),
                 'pillar': extras.get('pillar', 'unknown'),
                 'element': extras.get('element', 'unknown'),
                 'tags': [tag['name'] for tag in pkg.get('tags', [])]
